@@ -1,7 +1,10 @@
-import { Children } from "react";
+import  { AuthProvider } from "./Auth";
 import { FontProvider } from "./Font";
 
-
 export function AppProvider({ children }) {
-    return <FontProvider>{Children}</FontProvider>;
+  return (
+    <FontProvider>
+      <AuthProvider>{children}</AuthProvider>
+    </FontProvider>
+  );
 }
